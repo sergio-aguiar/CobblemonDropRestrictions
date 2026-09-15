@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "cobblemon_drop_restrictions",
+	"version": "${version}",
+	"name": "Cobblemon Drop Restrictions",
+	"description": "Restricts loot drops for configured entities unless they were killed by a player or player-owned damage.",
+	"authors": [
+		"Destroyaa"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/cobblemon_drop_restrictions/icon.png",
+	"environment": "*",
+	"mixins": [
+		"cobblemon_drop_restrictions.mixins.json"
+	],
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.cobblemondroprestrictions.CobblemonDropRestrictions",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"cobblemon": "*"
+	}
+}
